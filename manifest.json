@@ -1,0 +1,30 @@
+{
+  "name": "Linkedin helper suits",
+  "version": "180.0.1",
+  "manifest_version": 2,
+  "description" : "Linkedin automation software that helps users use the site more effectively.",
+    "browser_action": {
+      "default_icon": {                
+        "16": "static/linkedin.png",     
+        "24": "static/linkedin.png",     
+        "32": "static/linkedin.png"      
+      },
+      "default_title": "Linkedin",
+      "default_popup": "linkedin.html"    
+    },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+},
+  "content_scripts": [{
+      "matches": ["https://*.linkedin.com/*"],
+      "js": ["./scripts/auto_connect.js"]
+  }],
+  "icons": {
+    "192": "static/linkedin.png"
+},
+  "permissions": [
+      "tabs", "activeTab", "webNavigation", "storage"
+    ]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./static/logo.png" type="image/x-icon">
+    <title>linkedin</title>
+    <link rel="stylesheet" href="static/tailwind.css">
+</head>
+
+<style>
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    body{
+        
+        margin-left: 6px;
+        margin-right: 6px; 
+        min-width: 24rem;
+    }
+    .popup {
+        background: white;
+        max-height: 24rem;
+        overflow-y: auto;
+    }
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+    input[type="range"]::-moz-range-track {  
+  background-color: #000;
+}
+
+</style>
+
+<body class="text-center">
+    <div class="mx-1 my-2 popup">
+        <!-- <header class="bg-black text-white"> Linkedin</header> -->
+        <!-- <div class="flex"> -->
+            <div class="border-b-2 border-black pb-1">
+
+                <img src="./static/linkedin.png" class="w-8 h-8" style="margin: auto" alt="">
+                <p class="font-bold">Linkedin helper</p>
+            </div>
+        <!-- </div> -->
+        <hr />
+        <div class="slidecontainer my-2">
+            <p>number of connections: <span id="rangeNumber"></span></p>
+            <input type="range" min="1" max="200" value="1" class="slider" id="connectRange">
+            <br>
+            <p>Number of connections added: <span id="noOfConn">0</span></p>
+        </div>
+        <button class="py-2 px-4 shadow bg-black text-xl w-full rounded-lg text-white font-bold"id="store">Start</button>
+    </div>
+</body>
+<script src="popup.js"></script>
+</html>
